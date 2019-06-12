@@ -7,6 +7,7 @@
 //
 
 #import "XLSingleClickButton.h"
+#import "NSString+XLCategory.h"
 #import <objc/runtime.h>
 
 // 全局变量，用于按钮点击判断
@@ -22,7 +23,7 @@ static CGFloat xlSingleClickButtonTimeInterval;
 
 // 可以在load方法中调用
 //+(void)load{
-//    [self globalSingleClickButton];
+//    [self singleClickButtonWithTimeInterval:1.5s];
 //}
 
 -(instancetype)initWithFrame:(CGRect)frame{
@@ -41,18 +42,37 @@ static CGFloat xlSingleClickButtonTimeInterval;
     return self;
 }
 
+/**
+ 避免title显示nil等异常情况
+ 
+ @param title <#title description#>
+ @param state <#state description#>
+ */
+-(void)setTitle:(NSString *)title forState:(UIControlState)state{
+    if ([NSString isNilString:title]) {
+        title = @"";
+    }
+    [super setTitle:title forState:state];
+}
+
 -(void)xlInitViewData{
     _lastClickTimestamp = 0.0f;
 }
 
 /**
- 配置单次点击按钮间隔:x需要继承至XLSingleClickButton才会有效
+ 配置单次点击按钮间隔:需要继承至XLSingleClickButton才会有效
  */
 +(void)singleClickButtonWithTimeInterval:(CGFloat)interval{
     xlSingleClickButtonTimeInterval = interval;
 }
 
-// 按钮点击事件
+/**
+ 覆盖父类方法
+
+ @param action <#action description#>
+ @param target <#target description#>
+ @param event <#event description#>
+ */
 -(void)sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event{
     // event.timestamp 系统从开机到事件触发时的时间
     if (self.lastClickTimestamp == event.timestamp) {

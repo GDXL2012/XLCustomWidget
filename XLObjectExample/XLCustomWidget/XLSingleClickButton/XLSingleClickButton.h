@@ -6,14 +6,14 @@
 //  Copyright © 2019 xuelan. All rights reserved.
 //
 
-#import "XLButton.h"
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
  单点按钮：避免快速连续点击
  */
-@interface XLSingleClickButton : XLButton
+@interface XLSingleClickButton : UIButton
 
 /**
  配置单次点击按钮间隔:需要继承至XLSingleClickButton才会有效

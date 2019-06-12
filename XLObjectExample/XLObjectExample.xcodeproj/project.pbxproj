@@ -16,7 +16,6 @@
 		6CA313D62297C7DE006D9B14 /* UIColor+XLCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA313D52297C7DE006D9B14 /* UIColor+XLCategory.m */; };
 		6CA313DD2297D6F4006D9B14 /* NSDate+XLCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA313DC2297D6F4006D9B14 /* NSDate+XLCategory.m */; };
 		6CED67A322AFBE5900EC95F4 /* NSString+XLCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CED67A222AFBE5900EC95F4 /* NSString+XLCategory.m */; };
-		6CED67AB22AFE24100EC95F4 /* XLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CED67A722AFE24100EC95F4 /* XLButton.m */; };
 		6CED67AC22AFE24100EC95F4 /* XLSingleClickButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CED67AA22AFE24100EC95F4 /* XLSingleClickButton.m */; };
 		6CED67B222AFE2D800EC95F4 /* UIButton+SingleClick.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CED67B122AFE2D800EC95F4 /* UIButton+SingleClick.m */; };
 		6CED67B622AFE88A00EC95F4 /* XLSingleClickButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CED67B422AFE88A00EC95F4 /* XLSingleClickButtonController.m */; };
@@ -42,9 +41,7 @@
 		6CA313DC2297D6F4006D9B14 /* NSDate+XLCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+XLCategory.m"; sourceTree = "<group>"; };
 		6CED67A122AFBE5900EC95F4 /* NSString+XLCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XLCategory.h"; sourceTree = "<group>"; };
 		6CED67A222AFBE5900EC95F4 /* NSString+XLCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XLCategory.m"; sourceTree = "<group>"; };
-		6CED67A722AFE24100EC95F4 /* XLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLButton.m; sourceTree = "<group>"; };
 		6CED67A822AFE24100EC95F4 /* XLSingleClickButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLSingleClickButton.h; sourceTree = "<group>"; };
-		6CED67A922AFE24100EC95F4 /* XLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLButton.h; sourceTree = "<group>"; };
 		6CED67AA22AFE24100EC95F4 /* XLSingleClickButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLSingleClickButton.m; sourceTree = "<group>"; };
 		6CED67B022AFE2D800EC95F4 /* UIButton+SingleClick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+SingleClick.h"; sourceTree = "<group>"; };
 		6CED67B122AFE2D800EC95F4 /* UIButton+SingleClick.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SingleClick.m"; sourceTree = "<group>"; };
@@ -152,8 +149,6 @@
 		6CED67A622AFE21400EC95F4 /* XLSingleClickButton */ = {
 			isa = PBXGroup;
 			children = (
-				6CED67A922AFE24100EC95F4 /* XLButton.h */,
-				6CED67A722AFE24100EC95F4 /* XLButton.m */,
 				6CED67A822AFE24100EC95F4 /* XLSingleClickButton.h */,
 				6CED67AA22AFE24100EC95F4 /* XLSingleClickButton.m */,
 				6CED67B022AFE2D800EC95F4 /* UIButton+SingleClick.h */,
@@ -237,7 +232,6 @@
 			files = (
 				6CED67AC22AFE24100EC95F4 /* XLSingleClickButton.m in Sources */,
 				6CA313BB22979D99006D9B14 /* XLExampleViewController.m in Sources */,
-				6CED67AB22AFE24100EC95F4 /* XLButton.m in Sources */,
 				6CA313D62297C7DE006D9B14 /* UIColor+XLCategory.m in Sources */,
 				6CA313C622979D9A006D9B14 /* main.m in Sources */,
 				6CED67B622AFE88A00EC95F4 /* XLSingleClickButtonController.m in Sources */,
@@ -388,14 +382,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 927T384N62;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = XLObjectExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.guanghui.rongxin01;
+				PRODUCT_BUNDLE_IDENTIFIER = com.object.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -406,14 +400,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 927T384N62;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = XLObjectExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.guanghui.rongxin01;
+				PRODUCT_BUNDLE_IDENTIFIER = com.object.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

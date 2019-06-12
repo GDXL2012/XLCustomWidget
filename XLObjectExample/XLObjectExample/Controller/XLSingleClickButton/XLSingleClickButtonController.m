@@ -7,7 +7,6 @@
 //
 
 #import "XLSingleClickButtonController.h"
-#import "XLButton.h"
 #import "UIColor+XLCategory.h"
 #import "XLSingleClickButton.h"
 #import "UIButton+SingleClick.h"
@@ -29,27 +28,12 @@
     
     self.title = @"XLSingleClick";
     
-//    [self initViewForXLButton];
 //    [self initViewForXLSingleClickButton];
 //    [self initViewForButtonCategory];
     [self initViewForUIControlCategory];
 }
 
 #pragma mark - Init
-
--(void)initViewForXLButton{
-    [XLButton globalSingleClickButtonWithTimeInterval:4.0f];
-    
-    XLButton *button = [XLButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"XLButton" forState:UIControlStateNormal];
-    button.backgroundColor = [UIColor colorWithHexString:@"19A0F2"];
-    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    CGFloat xlScreenWidth = [UIScreen mainScreen].bounds.size.width;     // 屏幕宽度
-    button.frame = CGRectMake(25.0f, 105.0f + 45.0f * 2 + 35.0f * 2, xlScreenWidth - 25.0f * 2, 45.0f);
-    [self.view addSubview:button];
-    [button addTarget:self action:@selector(xlButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-    [button addTarget:self action:@selector(xlButton2Click:) forControlEvents:UIControlEventTouchUpInside];
-}
 
 -(void)initViewForButtonCategory{
     [UIButton globalSingleClickButtonWithTimeInterval:4.0f];
@@ -95,7 +79,7 @@
 
 #pragma mark - Click
 
-- (IBAction)xlButtonClick:(XLButton *)sender {
+- (IBAction)xlButtonClick:(UIButton *)sender {
     NSLog(@"xlButtonClick click");
 }
 

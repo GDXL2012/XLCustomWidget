@@ -72,6 +72,7 @@ static const char XLSingleClickTimeIntervalKey = '\0';
  @param event <#event description#>
  */
 -(void)xlSendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event{
+    // 此处添加判断，避免其他控件点击事件被错误处理
     if ([self isKindOfClass:[UIButton class]]) {
         // event.timestamp 系统从开机到事件触发时的时间
         if (self.lastClickTimestamp == event.timestamp) {

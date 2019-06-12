@@ -66,7 +66,7 @@ static const char XLSingleClickTimeIntervalKey = '\0';
 
 /**
  重要：该方法一定要实现，否则替换的就是父类UIControl中的方法，
- 则系统中其他继承自UIButton的类可能也会执行xlSendAction:to:forEvent:方法导致访问xlButtonClickAble出现异常
+ 则系统中其他继承自UIButton的类可能也会执行xlSendAction:to:forEvent:方法导致访问lastClickTimestamp出现异常
  从调试的现象看，UIButton似乎没有重写改方法，添加该方法不会导致Button中方法覆盖，但后续不知是否有问题
  
  @param action <#action description#>
@@ -85,25 +85,21 @@ static const char XLSingleClickTimeIntervalKey = '\0';
  @param event <#event description#>
  */
 -(void)xlSendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event{
-    if ([self isKindOfClass:[UIButton class]]) {
-        // event.timestamp 系统从开机到事件触发时的时间
-        if (self.lastClickTimestamp == event.timestamp) {
-            // 时间戳相同，同一个点击事件，不做快速点击判断
-            [self xlSendAction:action to:target forEvent:event];
-        } else if(event.timestamp - self.lastClickTimestamp > xlSingleClickButtonTimeInterval){
-            // 两个事件相隔时间戳大于设置时间
-            // 此处如果只是需要屏蔽系统双击或者更多连击的话，也可以判断event事件中UITouch.tapCount点击次数,
-            // 屏蔽数值大于1的点击事件
-            [self xlSendAction:action to:target forEvent:event];
-            // 时间戳更新
-            self.lastClickTimestamp = event.timestamp;
-        } else {
-            // 如果是需要连续两次的点击时间间隔不能超过设定值，则时间戳在此处也需要更新
-            // self.lastClickTimestamp = event.timestamp;
-            NSLog(@"短时间内多次点击");
-        }
-    } else {
+    // event.timestamp 系统从开机到事件触发时的时间
+    if (self.lastClickTimestamp == event.timestamp) {
+        // 时间戳相同，同一个点击事件，不做快速点击判断
         [self xlSendAction:action to:target forEvent:event];
+    } else if(event.timestamp - self.lastClickTimestamp > xlSingleClickButtonTimeInterval){
+        // 两个事件相隔时间戳大于设置时间
+        // 此处如果只是需要屏蔽系统双击或者更多连击的话，也可以判断event事件中UITouch.tapCount点击次数,
+        // 屏蔽数值大于1的点击事件
+        [self xlSendAction:action to:target forEvent:event];
+        // 时间戳更新
+        self.lastClickTimestamp = event.timestamp;
+    } else {
+        // 如果是需要连续两次的点击时间间隔不能超过设定值，则时间戳在此处也需要更新
+        // self.lastClickTimestamp = event.timestamp;
+        NSLog(@"短时间内多次点击");
     }
 }
 @end

@@ -20,14 +20,14 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEz-44-dqp" customClass="XLButton">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEz-44-dqp">
                     <rect key="frame" x="25" y="149" width="364" height="45"/>
                     <color key="backgroundColor" red="0.098039215690000001" green="0.62745098040000002" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="wDm-L1-Wfb"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="XLButton For XIB"/>
+                    <state key="normal" title="UIButton For XIB"/>
                     <connections>
                         <action selector="xlButtonClick:" destination="-1" eventType="touchUpInside" id="UPh-Hb-6tP"/>
                     </connections>
