@@ -25,7 +25,8 @@
 
 -(void)initViewData{
     _dataSource = @[@[@"单点按钮", @"XLSingleClickButtonController"],
-                    @[@"XLSingleClick", @"XLSingleClickButtonController"]];
+                    @[@"XLSingleClick", @"XLSingleClickButtonController"],
+                    @[@"PlaceholderTextView", @"XLTextViewController"]];
 }
 
 -(void)initViewDisplay{
@@ -61,7 +62,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 45.0f;
+    return 55.0f;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

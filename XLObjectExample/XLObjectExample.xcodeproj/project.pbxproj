@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C292C1F23D2FDDA0077D887 /* XLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C292C1E23D2FDDA0077D887 /* XLTextView.m */; };
+		6C292C2323D302730077D887 /* XLTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C292C2223D302730077D887 /* XLTextViewController.m */; };
 		6CA313B822979D99006D9B14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA313B722979D99006D9B14 /* AppDelegate.m */; };
 		6CA313BB22979D99006D9B14 /* XLExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA313BA22979D99006D9B14 /* XLExampleViewController.m */; };
 		6CA313BE22979D99006D9B14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CA313BC22979D99006D9B14 /* Main.storyboard */; };
@@ -24,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C292C1D23D2FDDA0077D887 /* XLTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLTextView.h; sourceTree = "<group>"; };
+		6C292C1E23D2FDDA0077D887 /* XLTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLTextView.m; sourceTree = "<group>"; };
+		6C292C2123D302730077D887 /* XLTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLTextViewController.h; sourceTree = "<group>"; };
+		6C292C2223D302730077D887 /* XLTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLTextViewController.m; sourceTree = "<group>"; };
 		6CA313B322979D99006D9B14 /* XLObjectExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XLObjectExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CA313B622979D99006D9B14 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6CA313B722979D99006D9B14 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +69,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C292C1C23D2FDA50077D887 /* XLPlaceholderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				6C292C1D23D2FDDA0077D887 /* XLTextView.h */,
+				6C292C1E23D2FDDA0077D887 /* XLTextView.m */,
+			);
+			path = XLPlaceholderTextView;
+			sourceTree = "<group>";
+		};
+		6C292C2023D3024F0077D887 /* XLPlaceholderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				6C292C2123D302730077D887 /* XLTextViewController.h */,
+				6C292C2223D302730077D887 /* XLTextViewController.m */,
+			);
+			path = XLPlaceholderTextView;
+			sourceTree = "<group>";
+		};
 		6CA313AA22979D99006D9B14 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +147,7 @@
 		6CED679A22AFBD3800EC95F4 /* XLCustomWidget */ = {
 			isa = PBXGroup;
 			children = (
+				6C292C1C23D2FDA50077D887 /* XLPlaceholderTextView */,
 				6CED67A622AFE21400EC95F4 /* XLSingleClickButton */,
 			);
 			path = XLCustomWidget;
@@ -131,6 +156,7 @@
 		6CED67A422AFE1F500EC95F4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6C292C2023D3024F0077D887 /* XLPlaceholderTextView */,
 				6CED67A522AFE20700EC95F4 /* XLSingleClickButton */,
 			);
 			path = Controller;
@@ -231,11 +257,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CED67AC22AFE24100EC95F4 /* XLSingleClickButton.m in Sources */,
+				6C292C2323D302730077D887 /* XLTextViewController.m in Sources */,
 				6CA313BB22979D99006D9B14 /* XLExampleViewController.m in Sources */,
 				6CA313D62297C7DE006D9B14 /* UIColor+XLCategory.m in Sources */,
 				6CA313C622979D9A006D9B14 /* main.m in Sources */,
 				6CED67B622AFE88A00EC95F4 /* XLSingleClickButtonController.m in Sources */,
 				6CA313DD2297D6F4006D9B14 /* NSDate+XLCategory.m in Sources */,
+				6C292C1F23D2FDDA0077D887 /* XLTextView.m in Sources */,
 				6CED67B222AFE2D800EC95F4 /* UIButton+SingleClick.m in Sources */,
 				6CED67BA22B0032200EC95F4 /* UIControl+SingleClick.m in Sources */,
 				6CED67A322AFBE5900EC95F4 /* NSString+XLCategory.m in Sources */,
@@ -316,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -369,7 +397,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -382,7 +410,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 927T384N62;
 				INFOPLIST_FILE = XLObjectExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -400,7 +428,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 927T384N62;
 				INFOPLIST_FILE = XLObjectExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
